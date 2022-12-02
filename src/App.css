@@ -20,8 +20,9 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(20px + 2vmin);
   color: white;
+  font-family: monospace;
 }
 
 .App-link {
@@ -38,5 +39,17 @@
 }
 
 .WeddingDate {
-  font-size: 72px;
+  font-size: calc(10px + 4vmin);
+}
+
+.Countdown {
+  font-size: calc(10px + 5vmin);
+  border-style: solid;
+  border-width: 0.5px;
+  padding: 20px;
+  width: 40vw;
+}
+
+.Initials{
+  font-size: calc(20px + 5vmin);
 }
