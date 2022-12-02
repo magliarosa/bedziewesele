@@ -1,5 +1,6 @@
 import './App.css';
 import Countdown from 'react-countdown';
+import { Helmet } from 'react-helmet';
 
 const renderer = ({ days, hours, minutes, seconds, completed }) => {
     return <span className='Countdown'><div>{days} dni</div> {hours}:{minutes}:{seconds}</span>;
@@ -8,6 +9,9 @@ const renderer = ({ days, hours, minutes, seconds, completed }) => {
 function App() {
   return (
     <div className="App">
+      <Helmet>
+        <title>Ślub Kasi i Tomka</title>
+      </Helmet>
       <header className="App-header">
         <p className='Initials'>K & T</p>
         <p>Do ślubu zostało:</p>
