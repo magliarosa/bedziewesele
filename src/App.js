@@ -16,7 +16,7 @@ function App() {
         <p className='Initials'>K & T</p>
         <p>Do ślubu zostało:</p>
         <Countdown 
-          date={'2023-07-29T15:00:00'}
+          date={new Date(Date.UTC(2023,7,29,14,0,0,0))}
           renderer={renderer}/> 
         <p className='WeddingDate'>
           29 | 07 | 2023
