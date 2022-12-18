@@ -1,20 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&display=swap');
+
 .App {
+  height: 100%;
+  margin: 0%;
+  overflow: hidden;
+  background-color: #efe6e1;
   text-align: center;
-  width: auto;
-  height: 100vh;
-  background-color: #282c34;
-  color: white;
-  font-family: monospace;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(20px + 2vmin);
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+
+
+.box {
+  --mask:
+    radial-gradient(67.08px at 90.00px 50%,#000 99%,#0000 101%) 0 calc(50% - 60px)/51% 120px repeat-y,
+    radial-gradient(67.08px at -60px 50%,#0000 99%,#000 101%) 30px 50%/calc(51% - 30px) 120px repeat-y,
+		radial-gradient(67.08px at calc(100% - 90.00px) 50%,#000 99%,#0000 101%) 100% calc(50% - 60px)/51% 120px repeat-y,
+    radial-gradient(67.08px at calc(100% + 60.00px) 50%,#0000 99%,#000 101%) calc(100% - 30px) 50%/calc(51% - 30px) 120px repeat-y;
+  -webkit-mask: var(--mask);
+          mask: var(--mask);
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -23,15 +34,18 @@
   }
 }
 
+.TimeUnit{
+  font-size: large;
+}
+
 .App-header {
-  background-color: #282c34;
+  /* background-color: #282c34; */
   /* min-height: 100vh; */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(20px + 2vmin);
-  color: white;
 }
 
 .App-link {
@@ -42,6 +56,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -51,14 +66,12 @@
   font-size: calc(10px + 4vmin);
 }
 
-.Countdown {
-  font-size: calc(10px + 5vmin);
-  border-style: solid;
-  border-width: 0.5px;
-  padding: 20px;
-  width: 40vw;
+
+
+.Initials {
+  font-size: calc(20px + 5vmin);
 }
 
-.Initials{
-  font-size: calc(20px + 5vmin);
+content {
+  width: auto;
 }
