@@ -7,9 +7,9 @@ import { useMediaQuery } from 'react-responsive';
 
 const renderer = ({ days, hours, minutes, seconds, completed }) => {
   return <span className='Countdown'>
-    <div>
+    <DaysContainer>
       {days} dni
-    </div>
+    </DaysContainer>
     <TimeContainer>
       <HourContainer><div>{hours}</div><div className='TimeUnit'>g</div></HourContainer>
       <MinuteContainer><div>{minutes}</div><div className='TimeUnit'>m</div></MinuteContainer>
@@ -45,6 +45,7 @@ const Links = styled.div`
   display: flex;
   flex-direction: column;
   row-gap: 10px;
+  align-items: center;
 `;
 
 const SidePicture = styled.div`
@@ -99,8 +100,8 @@ const MainContent = styled.div`
 `;
 
 const Initials = styled.div`
-  font-size: calc(20px + 5vmin);
-  padding: 1rem;
+  font-size: calc(40px + 5vmin);
+  padding: 3rem 1rem 1rem 1rem;
   white-space: nowrap;
 `;
 
@@ -111,6 +112,7 @@ const WeddingDate = styled.div`
   flex-direction: column;
   justify-content: center;
   align-content: center;
+  row-gap: 20px;
 `;
 
 const WeddingCountdown = styled.div`
@@ -122,7 +124,11 @@ const WeddingCountdown = styled.div`
   border-style: solid;
   padding: 20px;
   min-width: 180px;
-`
+`;
+
+const DaysContainer = styled.div`
+
+`;
 const TimeContainer = styled.div`
   display: flex;
   flex-direction: row;
@@ -163,7 +169,7 @@ const WeddingApp = styled.div`
     flex-wrap: nowrap;
     align-items: center;
   }
-`
+`;
 
 function App() {
   const isMobile = useMediaQuery({ query: '(max-width: 601px)' });
@@ -173,9 +179,9 @@ function App() {
         <title>Ślub Kasi i Tomka</title>
       </Helmet>
       {!isMobile && (<SidePicture>
-        <SideImg src='photos/tomek_profil.jpg' alt='123'></SideImg>
+        <SideImg src='photos/tomek_profil.jpg' alt='Tomek'></SideImg>
       </SidePicture>)}
-      {isMobile && (<MiddlePicture><MiddleImg src='photos/kasia_gora.jpg' alt='123'></MiddleImg></MiddlePicture>)}
+      {isMobile && (<MiddlePicture><MiddleImg src='photos/kasia_gora.jpg' alt='Kasia'></MiddleImg></MiddlePicture>)}
       <MainContent className='box'>
         <Initials>K & T</Initials>
         <p>Do ślubu zostało:</p>
@@ -189,13 +195,13 @@ function App() {
           <span>16:00</span>
         </WeddingDate>
         <Links>
-          <A target={'_blank'} href='https://goo.gl/maps/X16KL9MjJcvoeVw39'>Kościół</A>
-          <A target={'_blank'} href='https://goo.gl/maps/f5TWSABHb1XdiAks8'>Sala weselna</A>
+          <A target={'_blank'} href='https://goo.gl/maps/X16KL9MjJcvoeVw39'>Kościół➔</A>
+          <A target={'_blank'} href='https://goo.gl/maps/f5TWSABHb1XdiAks8'>Sala weselna➔</A>
         </Links>
       </MainContent>
-      {isMobile && (<MiddlePicture><MiddleImg src='photos/tomek_dol.jpg' alt='123'></MiddleImg></MiddlePicture>)}
+      {isMobile && (<MiddlePicture><MiddleImg src='photos/tomek_dol.jpg' alt='Tomek'></MiddleImg></MiddlePicture>)}
       {!isMobile && (<SidePicture>
-        <SideImg src='photos/kasia_profil.jpg' alt='123'></SideImg>
+        <SideImg src='photos/kasia_profil.jpg' alt='Kasia'></SideImg>
       </SidePicture>)}
     </WeddingApp>
   );
