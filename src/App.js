@@ -115,9 +115,13 @@ const WeddingDate = styled.div`
 
 const WeddingCountdown = styled.div`
   font-size: calc(10px + 5vmin);
+  border-left: 0px;
+  border-right: 0px;
+  border-top: 0.5px;
+  border-bottom: 0.5px;
   border-style: solid;
-  border-width: 0.5px;
   padding: 20px;
+  min-width: 180px;
 `
 const TimeContainer = styled.div`
   display: flex;
