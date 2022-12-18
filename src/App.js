@@ -195,6 +195,7 @@ function App() {
           <span>16:00</span>
         </WeddingDate>
         <Links>
+        <span>Sprawdź jak dojechać:</span>
           <A target={'_blank'} href='https://goo.gl/maps/X16KL9MjJcvoeVw39'>Kościół➔</A>
           <A target={'_blank'} href='https://goo.gl/maps/f5TWSABHb1XdiAks8'>Sala weselna➔</A>
         </Links>
